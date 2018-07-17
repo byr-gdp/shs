@@ -1,0 +1,17 @@
+{
+  "name": "shs",
+  "version": "1.0.0",
+  "description": "A simple http server based on build-in net module.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "byr-gdp",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.1.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0"
+  }
+}
