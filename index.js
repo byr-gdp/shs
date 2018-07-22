@@ -73,8 +73,8 @@ function handleConnection(socket) {
         'x-powered-by': 'gdp',
       },
       setHeaders() {
-        // 写入状态行 ojbk 浏览器也可以识别...
-        socket.write('HTTP/1.1 200 OJBK\r\n');
+        // rfc 1945 中关于 reason phrase 只是给了建议，但具体本地化实现并不会影响协议本身。
+        socket.write('HTTP/1.1 200 OK\r\n');
 
         // 写入 Content-Length，这里必须严格相等，否则 pending 或者 error。除非用 chunk。
         socket.write(`Content-Length: ${text.length}\r\n`);
